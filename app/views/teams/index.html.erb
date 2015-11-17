@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+
+    <p id="notice"><%= notice %></p>
+
+    <div class="col-md-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <h5 class="col-md-10">Listagem de Equipes</h5>
+            <div class="col-md-2">
+              <%= link_to 'Nova Equipe', new_team_path, class: "btn btn-warning pull-right" %>
+            </div>
+          </div>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Projeto</th>
+              <th class="col-md-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @teams.each do |team| %>
+            <tr>
+              <td><%= team.user %></td>
+              <td><%= team.project %></td>
+              <td>
+                <div class="btn-group pull-right">
+                  <%= link_to team, class: "btn btn-info" do %><i class="glyphicon glyphicon-eye-open"></i><% end %>
+                  <%= link_to edit_team_path(team), class: "btn btn-info" do %><i class="glyphicon glyphicon-edit"></i><% end %>
+                  <%= link_to team, method: :delete, data: { confirm: 'Confirma exclusão ?' }, class: "btn btn-info" do %><i class="glyphicon glyphicon-trash"></i><% end %>
+                </div>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
