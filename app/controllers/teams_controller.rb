@@ -1,10 +1,13 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
+
   # GET /teams
   # GET /teams.json
   def index
     @teams = Team.all
+    @users = User.all
+    authorize @users
   end
 
   # GET /teams/1
@@ -71,4 +74,4 @@ class TeamsController < ApplicationController
     def team_params
       params.require(:team).permit(:user_id, :project_id)
     end
-end
+ end

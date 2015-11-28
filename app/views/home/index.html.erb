@@ -1,12 +1,15 @@
 <div class="container">
-  <div class="row">
-    <h4 class="col-md-12">Cadastros</h4>
+  
+    
+    
+   <div class="row">
+    <h4 class="col-md-18">Cadastros</h4>
     <div class="col-md-3">
       <%= link_to clients_path, class: 'btn btn-block btn-info' do %>
       <h1>
-        <i class="glyphicon glyphicon-user"></i>
+        <i class="glyphicon glyphicon-briefcase"></i>
       </h1>
-      <h4>Clientes</h4>
+      <h4>Unidade</h4>
       <% end %>
     </div>
     <div class="col-md-3">
@@ -33,5 +36,25 @@
       <h4>Equipes</h4>
       <% end %>
     </div>
+    <div class="col-md-3">
+      <%= link_to control_users_index_path, class: 'btn btn-block btn-info' do %>
+      <h1>
+        <i class="glyphicon glyphicon-user"></i>
+      </h1>
+      <h4>Usuários Cadastrados</h4>
+      <% end %>
+    </div>
+    
+    <% else %>
+  
+    <div class="col-md-3">
+      <%= link_to user_report_index_path, class: 'btn btn-block btn-info' do %>
+      <h1>
+        <i class="glyphicon glyphicon-book"></i>
+      </h1>
+      <h4>Relatório</h4>
+      <% end %>
+      
+  </div>
   </div>
 </div>

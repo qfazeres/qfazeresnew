@@ -20,7 +20,7 @@
 </div>
 <div class="field">
   <div class="col-md-6">
-    <%= f.label :client_id, "Cliente" %><br>
+    <%= f.label :client_id, "Unidade" %><br>
     <!-- <%= f.text_field :client_id %> -->
     <%= select("project", "client_id", Client.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'Selecione'}, class: "form-control") %>
   </div>

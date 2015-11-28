@@ -2,8 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-nav {
-  border-radius: 0 !important;
+#navigation {
+ 
+  background-color: #003300;
+  border-color: #E7E7E7;
+}
+
+#letralogo {
+  color: #FFFFFF;
+}
+#letralogin {
+  color: #FFFFFF;
 }
 
 h3 {
@@ -24,3 +33,5 @@ h5 {
 height: 30px;
 
 }	
+
+

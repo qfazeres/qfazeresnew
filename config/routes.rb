@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+
+  get 'user_report/index'
+
+  get 'user_report/index'
+
+  get 'control_users/index'
+
   resources :teams
   devise_for :users
   resources :tasks

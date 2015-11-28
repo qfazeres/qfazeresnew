@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+
+    <p id="notice"><%= notice %></p>
+
+    <div class="col-md-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <h5 class="col-md-10">Funcionários Cadastrados</h5>
+            
+          </div>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Nível de Acessso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+            <td><%= user.email %></td>
+            <td><%= user.role %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
